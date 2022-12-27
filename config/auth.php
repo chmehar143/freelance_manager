@@ -40,6 +40,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+    //admin guard
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+    //freelancer guard
+        'freelancer' => [
+            'driver' => 'session',
+            'provider' => 'freelancers',
+        ],
     ],
 
     /*
@@ -64,7 +74,16 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+    //admin provider
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+    //freelancer provider
+        'freelancers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Freelancer::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
