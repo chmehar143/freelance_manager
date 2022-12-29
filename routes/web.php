@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.home.index');
 });
 
 Route::get('/dashboard', function () {
@@ -32,5 +32,9 @@ require __DIR__.'/auth.php';
 
 
 require __DIR__.'/admin.php';
+
+
+
+require __DIR__.'/freelancer.php';
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
